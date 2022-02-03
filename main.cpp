@@ -2,6 +2,7 @@
 #include <string>
 #include <algorithm>
 #include <string.h>
+#include <fstream>
 using namespace std;
 void swapPos(double *xp, double *yp)
 {
@@ -64,7 +65,27 @@ void strings()
   }
 }
 
+void exercise3File()
+{
+  string fileText;
+  string fullQuote[12];
+  bool loopControl;
+  ifstream ExternalFile("Session4Exercise3.txt");
+  int lineCount = 0;
+  while(getline(ExternalFile, fileText))
+  {
+    /*
+    fullQuote[lineCount] = fileText;
+    lineCount++;
+    */
+    cout << fileText << endl;
+  }
+  /*
+  cout << fullQuote[0] << " " << fullQuote[1] << " " << fullQuote[2] << " " << fullQuote[3] << " " << fullQuote[4] << " " << fullQuote[5] << " " << fullQuote[6] << " " << fullQuote[7] << " " << fullQuote[8] << " " << fullQuote[9] << " " << fullQuote[10] << endl; 
+  */
+}
+
 int main() {
-  strings();
+  exercise3File();
 }
 
